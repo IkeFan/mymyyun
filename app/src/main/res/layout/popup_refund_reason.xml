@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/popup_bg"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_color"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="退款原因"/>
+
+        <LinearLayout
+            android:id="@+id/select1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="多拍/错拍/不想要"/>
+
+            <CheckBox
+                android:clickable="false"
+                android:id="@+id/check1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:button="@drawable/check_collection2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/select2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="快递一直未送到"/>
+
+            <CheckBox
+                android:clickable="false"
+                android:id="@+id/check2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:button="@drawable/check_collection2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/select3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="未按约定时间发货"/>
+
+            <CheckBox
+                android:clickable="false"
+                android:id="@+id/check3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:button="@drawable/check_collection2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/select4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="空包裹"/>
+
+            <CheckBox
+                android:clickable="false"
+                android:id="@+id/check4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:button="@drawable/check_collection2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/select5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="快递无跟踪记录"/>
+
+            <CheckBox
+                android:clickable="false"
+                android:id="@+id/check5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:button="@drawable/check_collection2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/select6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="其他(将在退款原因中说明)"/>
+
+            <CheckBox
+                android:clickable="false"
+                android:id="@+id/check6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:button="@drawable/check_collection2"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="2dp"
+            android:background="#fff"/>
+
+        <Button
+            android:id="@+id/close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="关闭"
+            android:textColor="#fff"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</RelativeLayout>

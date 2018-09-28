@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context="com.mmy.maimaiyun.model.personal.ui.activity.RechargeWithdrawalsActivity">
+
+    <include layout="@layout/toolbar_normal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="#fff"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="余额￥"/>
+
+            <TextView
+                android:id="@+id/money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="0.00"
+                android:textColor="@color/colorPrimary"
+                android:textSize="40sp"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/money_text"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/stroke_black_bg"
+            android:hint="充值金额"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:text="提现方式"
+        android:textColor="@color/hint_text_color"/>
+
+    <LinearLayout
+        android:id="@+id/select_zfb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="40dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/zfb"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="支付宝"/>
+
+        <CheckBox
+            android:id="@+id/cb_zfb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/check_collection2"
+            android:clickable="false"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/select_wx"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="1dp"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="30dp"
+        >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/login_03"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="微信支付"/>
+
+        <CheckBox
+            android:id="@+id/cb_wx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:button="@drawable/check_collection2"
+            android:clickable="false"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/select_back"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="1dp"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp">
+
+        <LinearLayout
+            android:id="@+id/select_bank_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="银行卡"/>
+
+            <ImageView
+                android:id="@+id/bank_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/ic_def"/>
+
+            <TextView
+                android:id="@+id/bank_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="false"
+                tools:text="工商银行 (尾号0504)"/>
+
+            <CheckBox
+                android:id="@+id/cb_bk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/check_collection2"
+                android:clickable="false"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/show_bank_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/office_jiantou"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/shape_orange_solid"
+        android:text="充值"
+        android:textColor="#fff"
+        android:textSize="18sp"/>
+</LinearLayout>

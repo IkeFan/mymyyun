@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mmy.maimaiyun.model.main.ui.activity.OverseasShoppingActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:toolbarId="@+id/toolbar">
+
+            <RelativeLayout
+                android:layout_marginTop="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff">
+
+                <com.mmy.maimaiyun.customview.InnerViewPager
+                    android:id="@+id/banners"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <LinearLayout
+                    android:id="@+id/points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"/>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/title_back"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="8dp"
+                        android:src="@mipmap/icon_jiantou"/>
+
+                    <LinearLayout
+                        android:id="@+id/search"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_bg_search"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@mipmap/m0906_04"/>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/bg_color"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="搜索"
+                            android:textColor="@color/hint_text_color"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/colorPrimary"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

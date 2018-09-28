@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mmy.maimaiyun.model.personal.ui.activity.OrderInfoActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/toolbar_normal"/>
+
+            <LinearLayout
+                style="@style/Padding_10_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:background="#fff"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="收货人:XXX"/>
+
+                    <TextView
+                        android:id="@+id/phone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="188254656445"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="收货地址：XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Padding_10_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:background="#fff"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="交易成功"/>
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2017-11-11"
+                    android:textColor="@color/hint_text_color"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/good_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="3dp">
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Padding_10_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="订单号"/>
+
+                    <TextView
+                        android:id="@+id/order_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12454564"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="运费"/>
+
+                    <TextView
+                        android:id="@+id/freight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="￥0.00"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="优惠券"/>
+
+                    <TextView
+                        android:id="@+id/coupon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="￥0.00"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="商品总价"/>
+
+                    <TextView
+                        android:id="@+id/all_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="￥0.00"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Padding_10_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="#fff"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="实际付款"/>
+
+                <TextView
+                    android:id="@+id/payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥30.00"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="17sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/operation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="70dp"
+        android:background="#fff"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/stroke_black_bg"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="删除"/>
+
+    </LinearLayout>
+</RelativeLayout>

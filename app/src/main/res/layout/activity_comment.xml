@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".model.personal.ui.activity.CommentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_normal"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="7dp"/>
+
+        <LinearLayout
+            style="@style/Padding_5_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/shape_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/ic_shop"/>
+
+            <TextView
+                android:id="@+id/shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/good_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--<include layout="@layout/item_conf_order"/>-->
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/Padding_5_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="评分:"/>
+
+                <RatingBar
+                    android:id="@+id/star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:max="5"
+                    android:maxHeight="25dp"
+                    android:minHeight="10dp"
+                    android:progressDrawable="@drawable/star_bg"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/text"
+                style="@style/Padding_5_10"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="7dp"
+                android:background="@drawable/stroke_black_10dp_bg"
+                android:gravity="start"
+                android:hint="宝贝满足您的期望吗？快来说说他的优点和美中不足吧"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="#fff"/>
+
+        <Button
+            android:id="@+id/submit"
+            style="@style/submitBt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="20dp"
+            android:text="提交"/>
+    </LinearLayout>
+</ScrollView>

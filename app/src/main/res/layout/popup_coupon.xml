@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/popup_bg"
+        android:gravity="bottom"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:layout_height="400dp">
+        <TextView
+            android:padding="5dp"
+            android:text="店铺优惠券"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <View
+            android:background="@color/devider"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"/>
+        <android.support.v7.widget.RecyclerView
+            android:padding="7dp"
+            android:id="@+id/list"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/close"
+                android:text="关  闭"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:padding="10dp"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

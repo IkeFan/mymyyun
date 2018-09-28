@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="15dp"
+        android:gravity="center_horizontal"
+        android:paddingRight="15dp"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/point"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/circle_red"/>
+        <View
+            android:id="@+id/line"
+            android:layout_width="1.5dp"
+            android:background="@color/hint_text_color"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:paddingBottom="30dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/info"
+            android:textSize="16sp"
+            tools:text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/time"
+            tools:text="2017-11-11 11:11:11"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/hint_text_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

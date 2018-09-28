@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context="com.mmy.maimaiyun.model.personal.ui.activity.AuthSecondActivity">
+
+    <include layout="@layout/toolbar_normal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:id="@+id/front"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawablePadding="15dp"
+                android:drawableTop="@mipmap/camea"
+                android:text="身份证正面照"
+                android:textColor="@color/hint_text_color"/>
+
+            <ImageView
+                android:id="@+id/front_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/opposite"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawablePadding="15dp"
+                android:drawableTop="@mipmap/camea"
+                android:text="身份证反面照"
+                android:textColor="@color/hint_text_color"/>
+
+            <ImageView
+                android:id="@+id/opposite_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_orange_solid"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="提交"
+        android:textColor="#fff"
+        android:textSize="15sp"/>
+</LinearLayout>

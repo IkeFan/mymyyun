@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:id="@+id/item_bg"
+              android:layout_height="wrap_content"
+              android:background="@mipmap/conpon_bg2"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="17dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DIOR"
+                android:textColor="#fff"
+                android:textSize="12sp"/>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/circle_white">
+
+                <ImageView
+                    android:id="@+id/shop_icon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_def"/>
+            </FrameLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:id="@+id/tag1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:textColor="#fff"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:id="@+id/money_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tag1"
+                android:textColor="#fff"
+                android:textSize="60sp"
+                tools:text="20"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/money_text"
+                android:gravity="bottom"
+                android:text="优惠券"
+                android:textColor="#fff"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/overdue_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingBottom="10dp"
+                android:src="@mipmap/overdue"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使用期限："
+                android:textColor="#6c6c6c"/>
+
+            <TextView
+                android:id="@+id/time_scope"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#6c6c6c"
+                tools:text="2016.11.11 ~ 2017.11.11"/>
+
+            <TextView
+                android:id="@+id/is_overdue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已过期"
+                android:textColor="#6c6c6c"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/clazz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="使用门槛：Dior品牌类目"
+            android:textColor="#6c6c6c"/>
+    </LinearLayout>
+</LinearLayout>

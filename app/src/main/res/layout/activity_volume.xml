@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+        android:orientation="vertical"
+    tools:context="com.mmy.maimaiyun.model.main.ui.activity.VolumeActivity">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center_vertical"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/jiantou"
+            android:src="@mipmap/icon_jiantou"
+            android:layout_width="7dp"
+            android:scaleType="fitXY"
+            android:layout_height="15dp"/>
+        <LinearLayout
+            android:id="@+id/search"
+            android:layout_weight="1"
+            android:background="@drawable/shape_white"
+            android:layout_width="0dp"
+            android:padding="3dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginLeft="6dp"
+                android:src="@mipmap/m0906_04"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+            <View
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="1px"
+                android:background="@color/devider"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:text="搜索"
+                android:textColor="@color/hint_text_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <com.mmy.maimaiyun.customview.LoadingSmartLayout
+        android:id="@id/loading_smart_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

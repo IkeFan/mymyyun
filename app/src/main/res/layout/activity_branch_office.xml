@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context=".model.personal.ui.activity.BranchOfficeActivity">
+
+    <include layout="@layout/toolbar_normal"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1px"
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="运营商名称"/>
+
+                <EditText
+                    android:id="@+id/office_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:gravity="right"
+                    android:hint="请输入"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/office_scenery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1px"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="运营商外景"/>
+
+                <TextView
+                    android:id="@+id/office_scenery_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:drawableRight="@mipmap/office_jiantou"
+                    android:gravity="right"
+                    android:text="请选择"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/office_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1px"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="运营商所在区域"/>
+
+                <TextView
+                    android:id="@+id/office_city_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:drawableRight="@mipmap/office_jiantou"
+                    android:gravity="right"
+                    android:text="请选择"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1px"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="运营商所在地址"/>
+
+                <EditText
+                    android:id="@+id/office_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:gravity="right"
+                    android:hint="请输入"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1px"
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="代表法人姓名"/>
+
+                <EditText
+                    android:id="@+id/legal_person"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:gravity="right"
+                    android:hint="请输入"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1px"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="联系方式"/>
+
+                <EditText
+                    android:id="@+id/link"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:inputType="number"
+                    android:gravity="right"
+                    android:hint="请输入"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/legal_img_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1px"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="法人身份证附件"/>
+
+                <TextView
+                    android:id="@+id/legal_img"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:drawableRight="@mipmap/office_jiantou"
+                    android:gravity="right"
+                    android:text="请选择"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/business_license_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1px"
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="营业执照"/>
+
+                <TextView
+                    android:id="@+id/business_license"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:drawableRight="@mipmap/office_jiantou"
+                    android:gravity="right"
+                    android:text="请选择"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tax_img_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1px"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="税务登记证"/>
+
+                <TextView
+                    android:id="@+id/tax_img"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:drawableRight="@mipmap/office_jiantou"
+                    android:gravity="right"
+                    android:text="请选择"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1px"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="组织机构代码"/>
+
+                <TextView
+                    android:id="@+id/organization_code"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:drawableRight="@mipmap/office_jiantou"
+                    android:gravity="right"
+                    android:text="请选择"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bank_account_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1px"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="银行开户许可证"/>
+
+                <TextView
+                    android:id="@+id/bank_account"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:drawableRight="@mipmap/office_jiantou"
+                    android:gravity="right"
+                    android:text="请选择"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1px"
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我已阅读并同意"/>
+
+                <TextView
+                    android:id="@+id/agreement_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="《用户服务协议》"
+                    android:textColor="@color/colorPrimary"/>
+
+                <CheckBox
+                    android:id="@+id/user_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/submit"
+                style="@style/submitBt"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="提交申请"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

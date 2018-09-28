@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#fff"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/Padding_5_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#dcdcdc"
+        tools:text="XXXXXXXXXXXXXX"/>
+
+    <com.mmy.maimaiyun.customview.FlowLayout
+        android:id="@+id/sub_class"
+        style="@style/Padding_5_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:height_space="10dp"
+        app:width_space="10dp"/>
+</LinearLayout>

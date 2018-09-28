@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context="com.mmy.maimaiyun.model.personal.ui.activity.QrCodeActivity">
+
+    <include layout="@layout/toolbar_normal"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/shop_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_def"/>
+
+        <TextView
+            android:id="@+id/shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_toRightOf="@id/shop_icon"
+            android:text="XXX店铺"/>
+
+        <TextView
+            android:id="@+id/tag1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shop_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="扫描二维码可以访问店铺"/>
+
+        <ImageView
+            android:id="@+id/qr_code"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/tag1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_def"/>
+    </RelativeLayout>
+</RelativeLayout>

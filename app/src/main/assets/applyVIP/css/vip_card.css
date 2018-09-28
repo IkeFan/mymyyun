@@ -1,0 +1,555 @@
+@charset "UTF-8";
+
+.bg,.list-head,.received-bg-v2,.received-bg-v3 {
+	max-width: 640px
+}
+
+.coupon-event-goods li .goods-name,.coupon-event-list-item ul li .detail .goods-name {
+	clear: both;
+	text-overflow: ellipsis;
+	word-break: break-all;
+	word-wrap: break-word;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical
+}
+
+.bg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	width: 100%;
+	height: auto;
+	background-color: #fe4a5b
+}
+
+.share-button-NATIVE,.share-button-SHARE {
+	position: absolute;
+	width: 100%;
+	height: 7%;
+	left: 0;
+	top: 80%;
+	text-align: center
+}
+
+.share-button-NATIVE .button-label-bg,.share-button-SHARE .button-label-bg {
+	position: absolute;
+	left: 24%;
+	width: 52%;
+	height: 100%;
+	border-radius: 5px;
+	background-color: #f44;
+	color: #fff;
+	font-family: "Î¢ÈíÑÅºÚ";
+	line-height: 170%;
+	font-size: .29rem;
+	font-weight: 700
+}
+
+.share-button-NATIVE .share-received,.share-button-SHARE .share-received {
+	background-color: #aaa
+}
+
+.share-button-NATIVE {
+	height: 7%;
+	top: 83%
+}
+
+.share-button-NATIVE .button-label-bg {
+	background-color: #ff0;
+	color: #f44
+}
+
+.button-newyear {
+	z-index: 103;
+	position: relative;
+	width: 100%;
+	margin-top: 5%;
+	text-align: center
+}
+
+.button-newyear img {
+	width: 80%
+}
+
+.button-newyear-received {
+	position: absolute!important;
+	top: 63%!important
+}
+
+.coupon_event_message {
+	z-index: 102;
+	width: 100%;
+	position: relative;
+	margin-top: 5%;
+	text-align: center;
+	color: #fff;
+	font-size: 16px
+}
+
+.coupon_event_message_received {
+	position: absolute!important;
+	top: 49%!important;
+	font-size: 20px!important
+}
+
+.coupon_animation {
+	position: absolute;
+	top: 25%;
+	width: 40%;
+	left: 30%;
+	z-index: 10
+}
+
+.coupon_cover {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 100
+}
+
+.bgImage,.coupon_event_coupons,.received-bg-v2 {
+	width: 100%;
+	position: relative
+}
+
+.coupon_event_coupons {
+	margin-top: 5%;
+	left: 0;
+	height: auto;
+	padding-bottom: 10px;
+	background-color: #fe4a5b;
+	z-index: 101
+}
+
+.event-pin2-small {
+	font-size: 47px;
+	line-height: 90px
+}
+
+.bgImage {
+	margin-top: 0;
+	z-index: 1
+}
+
+.received-bg-v2 {
+	background: url("/themes/haohai2017/images/coupon_event_v2_received_bg_new.png") no-repeat;
+	background-size: 100% auto;
+	height: auto
+}
+
+.received-bg-v2 .hint-v2 {
+	position: absolute;
+	width: 42.91%;
+	height: 35%;
+	top: 13%;
+	left: 28.54%;
+	z-index: 10;
+	text-align: center;
+	color: #ff504d
+}
+
+.received-bg-v2 .hint-v2 .hint-label {
+	font-size: .18rem;
+	height: 45%;
+	font-weight: 700
+}
+
+.received-bg-v2 .hint-v2 .total-discount span {
+	font-size: 4.1em
+}
+
+.received-bg-v2 .hint-v2 .total-discount b {
+	font-size: 2.9em
+}
+
+.received-bg-v2 .coupon-rows {
+	position: absolute;
+	top: 54%;
+	width: 100%;
+	text-align: center;
+	color: #fff
+}
+
+.received-bg-v2 .coupon-rows li {
+	display: inline-block;
+	width: 24.9%;
+	border-right: 1px solid #fff;
+	overflow: hidden
+}
+
+.received-bg-v2 .coupon-rows li .discount {
+	font-size: 2.3em
+}
+
+.received-bg-v2 .coupon-rows li .min-amount {
+	font-size: 1.1em
+}
+
+.received-bg-v2 .coupon-rows li:last-child {
+	border: none
+}
+
+.received-bg-v2 .coupon-rows:last-child {
+	top: 77%
+}
+
+.list-head {
+	position: relative;
+	background-color: #fff;
+	width: 100%;
+	height: 70px;
+	margin-top: 11px;
+	padding-top: 27px;
+	text-align: center;
+	color: #000;
+	font-size: 18px;
+	border-top: 1px solid #dadada
+}
+
+.list-detail {
+	position: relative;
+	background-color: #fff;
+	padding-bottom: 1px;
+	margin: 0!important
+}
+
+.coupon-event-goods {
+	width: 100%;
+	padding-left: 2.174%;
+	padding-right: 2.174%;
+	margin-bottom: 19px;
+	overflow: hidden
+}
+
+.coupon-event-goods li {
+	position: relative;
+	display: inline-block;
+	margin-left: 2.174%;
+	margin-right: 2.174%;
+	border: 1px solid #e9e9e9;
+	width: 45.652%;
+	overflow: hidden
+}
+
+.coupon-event-goods li .goods-image {
+	text-align: center;
+	position: relative
+}
+
+.coupon-event-goods li .goods-image img {
+	width: 88.86%;
+	height: auto
+}
+
+.coupon-event-goods li .goods-image .coupon-hint {
+	position: absolute;
+	bottom: 0;
+	background-color: #ff504d;
+	opacity: .75;
+	width: 100%;
+	height: 18px;
+	line-height: 18px;
+	font-size: 11px;
+	color: #fff;
+	z-index: 10
+}
+
+.coupon-event-goods li .goods-name {
+	font-size: 1.4em;
+	color: #000;
+	overflow: hidden;
+	display: -webkit-box;
+	text-align: left;
+	margin-top: 0.6em;
+	padding: 0 8px
+}
+
+.coupon-event-goods li .goods-price {
+	bottom: 0.7em;
+	font-size: 1.6em;
+	color: #ff2742;
+	text-align: left;
+	padding-left: 8px;
+	margin-top: 0.5em
+}
+
+.go-index {
+	margin-top: 13px;
+	height: 51px;
+	line-height: 51px;
+	background-color: #ff504d;
+	color: #fff;
+	font-size: 20px;
+	text-align: center
+}
+
+.unreceived-bg-v2 {
+	background: url("/themes/haohai2017/images/coupon_event_v2_unreceived_bg.png") no-repeat;
+	background-size: 100% auto;
+	width: 100%;
+	max-width: 640px;
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	margin: 0;
+	padding: 0
+}
+
+.unreceived-bg-v2 .total-discount {
+	position: absolute;
+	width: 100%;
+	height: auto;
+	font-size: .35rem;
+	font-weight: 700;
+	text-align: center;
+	color: #fff
+}
+
+.unreceived-bg-v2 .clicker {
+	position: absolute;
+	width: 30%;
+	left: 35%
+}
+
+.list-detail-v3 {
+	position: relative;
+	background-color: #f3f3f3;
+	margin-top: 12px!important
+}
+
+.received-bg-v3 {
+	background: url("/themes/haohai2017/images/coupon_event_v4_received_bg.png") no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: auto;
+	position: relative
+}
+
+.received-bg-v3 .hint-v3 {
+	position: absolute;
+	width: 43.2%;
+	height: 10em;
+	top: 10%;
+	left: 29.5%;
+	z-index: 10;
+	text-align: center;
+	color: #ff514d
+}
+
+.received-bg-v3 .hint-v3 .hint-label {
+	font-size: 1.8em;
+	height: 30%;
+	font-weight: 700;
+	padding-top: 0em
+}
+
+.received-bg-v3 .hint-v3 .total-discount {
+	margin-top: 8%;
+	font-size: 1.8em
+}
+
+.received-bg-v3 .hint-v3 .total-discount i {
+	font-size: 1.8em
+}
+
+.received-bg-v3 .hint-v3 .forward-hint {
+	width: 100%;
+	z-index: 1;
+	position: absolute;
+	bottom: -.3rem;
+	text-align: center
+}
+
+.received-bg-v3 .hint-v3 .forward-hint span {
+	color: #fe7d3f;
+	font-size: 1.0em
+}
+
+.coupon-event-list-item {
+	background-color: #fff;
+	background-size: 100% auto;
+	margin: 9px 10px 0;
+	border: 1px solid #d3d3d3;
+	border-radius: 4.5px;
+	width: 100%;
+	position: relative
+}
+
+.coupon-event-list-item .item-head {
+	position: relative;
+	height: 56px;
+	padding: 10px
+}
+
+.coupon-event-list-item .item-head .label-bg {
+	background-image: url("/themes/haohai2017/images/coupon_event_label_x2.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 117px;
+	height: 40px;
+	color: #fff;
+	overflow: hidden;
+	padding: 5px 6px
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:3) {
+	.coupon-event-list-item .item-head .label-bg {
+		background-image: url("/themes/haohai2017/images/coupon_event_label_x3.png")
+	}
+}
+
+.coupon-event-list-item .item-head .label-bg .desc {
+	float: left;
+	vertical-align: middle
+}
+
+.coupon-event-list-item .item-head .label-bg .desc b {
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 18px
+}
+
+.coupon-event-list-item .item-head .label-bg .desc p {
+	font-size: 7px;
+	line-height: 10px
+}
+
+.coupon-event-list-item .item-head .label-bg .discount {
+	float: right;
+	font-size: 12px;
+	z-index: 1;
+	line-height: 32px
+}
+
+.coupon-event-list-item .item-head .label-bg .discount span {
+	font-size: 30px;
+	letter-spacing: -1px;
+	font-weight: 100
+}
+
+.coupon-event-list-item ul {
+	border-top: 1px dashed #d3d3d3;
+	padding-top: 8px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch
+}
+
+.coupon-event-list-item ul li {
+	display: inline-block;
+	width: 35.7%;
+	padding: 0 10px 10px
+}
+
+.coupon-event-list-item ul li img {
+	width: 100%;
+	height: auto
+}
+
+.coupon-event-list-item ul li .detail {
+	margin-top: 4px;
+	overflow: hidden
+}
+
+.coupon-event-list-item ul li .detail .goods-name {
+	font-size: 11px;
+	color: #666;
+	overflow: hidden;
+	display: -webkit-box;
+	text-align: left;
+	padding: 0 5px;
+	height: 28px;
+	line-height: 14px;
+	white-space: normal!important
+}
+
+.coupon-event-list-item ul li .detail .after-coupon-price {
+	margin-top: 1px;
+	overflow: hidden;
+	color: #ff2741;
+	height: 36px;
+	line-height: 1
+}
+
+.coupon-event-list-item ul li .detail .after-coupon-price .normal-price {
+	padding-left: 40%;
+	color: #9c9c9c;
+	font-size: 9px;
+	line-height: 18px
+}
+
+.coupon-event-list-item ul li .detail .after-coupon-price .price-box {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	display: -webkit-flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-justify-content: center;
+	-webkit-box-align: end;
+	-ms-flex-align: end;
+	align-items: flex-end;
+	-webkit-align-items: flex-end;
+	font-size: 0
+}
+
+.coupon-event-list-item ul li .detail .after-coupon-price .price-box span {
+	vertical-align: bottom
+}
+
+.coupon-event-list-item ul li .detail .after-coupon-price .price-box .sgn {
+	font-size: 10px;
+	margin-bottom: 1px
+}
+
+.coupon-event-list-item ul li .detail .after-coupon-price .price-box .price {
+	font-size: 15px
+}
+
+.coupon-event-list-item ul li .detail .after-coupon-price .price-box .txt {
+	text-align: center;
+	margin: 0 0 1px 5px;
+	color: #fff;
+	font-size: 7px;
+	background-color: #ff2741;
+	width: 26px;
+	height: 11px;
+	line-height: 11px;
+	border-radius: 4px
+}
+
+.coupon-event-list-item .cover {
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 10px;
+	width: 100%;
+	z-index: 10;
+	border-radius: 4.5px
+}
+
+.go-index-v3 {
+	margin: 12px 10px 6px;
+	height: 46px;
+	line-height: 46px;
+	background-color: #f2f2f2
+}
+
+.go-index-v3 .detail {
+	background-color: #5AB941;
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	border-radius: 4.5px
+}
+
+#received-area {
+	background-color: #f2f2f2!important
+}

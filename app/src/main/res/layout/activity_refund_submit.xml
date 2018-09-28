@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".model.personal.ui.activity.RefundSubmitActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <include layout="@layout/toolbar_normal"/>
+
+        <include layout="@layout/item_order_good"/>
+
+        <LinearLayout
+            android:id="@+id/good_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:background="#fff"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="货物状态"/>
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableRight="@mipmap/office_jiantou"
+                android:text="请选择"
+                android:textColor="@color/hint_text_color"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/refund_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:background="#fff"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="退款原因"/>
+
+            <TextView
+                android:id="@+id/reason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableRight="@mipmap/office_jiantou"
+                android:text="请选择"
+                android:textColor="@color/hint_text_color"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:padding="15dp"
+            android:text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/money_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:background="#fff"
+            android:padding="15dp"
+            android:text="退款金额：￥0.00"/>
+
+        <TextView
+            android:id="@+id/money_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="最多退款 ￥0.00，含发货邮费 ￥0.00"
+            android:textColor="@color/hint_text_color"
+            android:textSize="12sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:background="#fff"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="退款说明："/>
+
+            <EditText
+                android:id="@+id/explain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="选项"
+                android:textColor="@color/hint_text_color"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/select_bank_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择退款银行卡"/>
+
+            <ImageView
+                android:id="@+id/bank_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/ic_def"/>
+
+            <TextView
+                android:drawableRight="@mipmap/office_jiantou"
+                android:id="@+id/bank_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                tools:text="工商银行 (尾号0504)"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上传凭证"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="(最多上传6张)"
+                    android:textColor="@color/hint_text_color"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+        <Button
+            style="@style/submitBt"
+            android:text="提交"
+            android:id="@+id/submit"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FlowLayout">
+        <attr name="width_space" format="dimension"/>
+        <attr name="height_space" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="MessageHintView">
+        <attr name="text_size_sp" format="integer"/>
+        <attr name="type" >
+            <!--小红点-->
+            <flag name="pint" value="0"/>
+            <!--带数字的小红点-->
+            <flag name="number" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>

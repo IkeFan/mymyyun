@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context="com.mmy.maimaiyun.model.personal.ui.activity.RefundInfoActivity">
+
+    <include layout="@layout/toolbar_normal"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="#fff"
+        android:padding="10dp"
+        android:text="您已成功的发起了申请，请耐心等待商家处理。"
+        android:textSize="15sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:background="@drawable/circle_gray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="如果商家同意或者超时未处理，系统将退款给您。"
+            android:textColor="@color/hint_text_color"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/circle_gray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="如果商家拒绝，您可以修改退款申请后再次发起，商家会重新处理。"
+            android:textColor="@color/hint_text_color"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke_black_10dp_bg"
+            android:paddingBottom="6dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="6dp"
+            android:text="联系客服"/>
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:background="@drawable/stroke_black_10dp_bg"-->
+            <!--android:paddingBottom="6dp"-->
+            <!--android:paddingLeft="12dp"-->
+            <!--android:paddingRight="12dp"-->
+            <!--android:paddingTop="6dp"-->
+            <!--android:text="撤销申请"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:background="@drawable/stroke_black_10dp_bg"-->
+            <!--android:paddingBottom="6dp"-->
+            <!--android:paddingLeft="12dp"-->
+            <!--android:paddingRight="12dp"-->
+            <!--android:paddingTop="6dp"-->
+            <!--android:text="修改申请"/>-->
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="#fff"
+        android:padding="10dp"
+        android:text="退款信息"
+        android:textSize="15sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:paddingBottom="3dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="3dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="90dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_def"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingTop="6dp">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/clzz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="颜色分类：套装"
+                android:textColor="@color/hint_text_color"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="#fff"
+        android:padding="10dp"
+        android:text="退款原因：多拍/错拍/不想要"
+        android:textColor="@color/hint_text_color"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:text="退款金额：￥49.00"
+        android:textColor="@color/hint_text_color"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:text="申请时间：2017-09-08 11:22"
+        android:textColor="@color/hint_text_color"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:text="退款编号：5645641"
+        android:textColor="@color/hint_text_color"
+        android:textSize="12dp"/>
+</LinearLayout>

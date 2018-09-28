@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".model.main.ui.activity.SearchActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@mipmap/icon_jiantou"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_white"
+            android:gravity="center_vertical"
+            android:padding="3dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="6dp"
+                android:src="@mipmap/m0906_04"/>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/devider"/>
+
+            <EditText
+                android:id="@+id/search_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:hint="请输入商品名/商铺名"
+                android:textColor="@color/hint_text_color"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/search"
+            android:text="搜索"
+            android:textColor="#fff"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <com.mmy.maimaiyun.customview.LoadingSmartLayout
+        android:id="@+id/loading_smart_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"/>
+</LinearLayout>

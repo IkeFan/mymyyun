@@ -1,0 +1,208 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+//添加如下代码，应用apt插件
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        applicationId "com.mmy.maimaiyun"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 11012
+        versionName "4.1.1"
+        resValue "string", "app_name", "麦麦云农村电商"
+        resValue "string", "integral_name", "麦豆"
+        //快递100
+        buildConfigField "String", "LOG_100_KEY", '"eQWZgGOu2818"'//key
+        buildConfigField "String", "LOG_100_CUSTOMER", '"936D2D2DD2B47D98B3149BB4F23B679C"'//公司编号
+        //微信配置
+        buildConfigField "String", "WEIXIN_APPKEY", '"wxd8284d2db6161ee5"'
+        buildConfigField "String", "WECHAT_APP_SECRET", '"b04a6da5abe329ae4896881a6cb9a4d0"'
+        //融云
+        buildConfigField "String", "RONG_APPKEY", '"qd46yzrf47xef"'
+        buildConfigField "String", "RONG_SECRET", '"sASQ46te0STI2"'
+        //融云客服
+        buildConfigField "String", "RONG_SERVICE", '"KEFU151141765528506"'
+        //bugly
+        buildConfigField "String", "BUGLY_KEY", '"53b16ed64b"'
+        //支付宝配置
+        buildConfigField "String", "ZFB_APPKEY", '"2017101109247178"'
+        buildConfigField "String", "ZFB_public_key", '"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqmWodN7Fes0t1QtvJKpAyV+RvFqvXVWnVWMH7QPupvWEJDrW+xYvv5hedvZ2rl3HAAnUKw3pNERbahrCxgDzO4vo61mJgPdCDFGpXDc2SeG5RJQYVkkIKELZCjJbqfPKbkk2xCx9UP3YwlsmdhLN7p4OFknpZubCWzMtQ+Wy+F3pwe3rMskxpZGrqjyphaEqYb5bd4JHMgQRJq9iB+0dXpZQFSmWs34uniLMGgwRX5YIw2X2mD7Vi8BakGdJii0UpRTrgtKyij7dtlunNUv5xy6essHAzwcQ2D2kRYXW8WphcJEGX76V9Y/q1XZEDWYQZUgIB99OG5OVuPOs5jQHUwIDAQAB"'
+        buildConfigField "String", "APP_LOGO", '"file:///android_asset/maimaiyun/login_09.png"'
+        buildConfigField "String", "HOST", '"http://www.mymyun.com"'
+        buildConfigField "String", "SPLASH_BG", '"file:///android_asset/maimaiyun/splash_maimaiyun.png"'
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled = true
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi', 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+        // 移除无用的resource文件
+//        shrinkResources true
+        //中国食品
+        manifestPlaceholders = [app_icon            : "@mipmap/login_09",
+                                WEIXIN_APPKEY       : "wxd8284d2db6161ee5",
+                                UMENG_APPKEY        : "59096bf53eae257b97000160",
+                                UMENG_MESSAGE_SECRET: "76a5695d8fe02b34845627ce4271db3a",
+                                GAODE_APPKEY        : "8e77f00a2afb51d17f816dc6e5c1fb8c"]
+
+    }
+    lintOptions {
+        checkReleaseBuilds true
+        abortOnError true
+    }
+
+    //设置JDK1.8
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    signingConfigs {
+        release {
+            keyAlias 'mmy'
+            keyPassword 'lucas19911226'
+            storeFile file('./mmy_keystore.jks')
+            storePassword 'lucas19911226'
+        }
+        debug {
+            keyAlias 'mmy'
+            keyPassword 'lucas19911226'
+            storeFile file('./mmy_keystore.jks')
+            storePassword 'lucas19911226'
+        }
+//        tradfood {
+//            keyAlias 'ct1212app'
+//            keyPassword '2016ct1212'
+//            storeFile file('./ct1212app.keystore')
+//            storePassword '2016ct1212'
+//        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+            shrinkResources false// 移除无用的resource文件
+            android.applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    output.outputFile = new File(output.outputFile.parent, "${variant.productFlavors[0].name}_" + defaultConfig.versionCode + "_v" +
+                            defaultConfig.versionName + ".apk")
+                }
+            }
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+
+    //渠道
+    productFlavors {
+        _360 {}
+        tradFood {}
+        baidu {
+//            resValue "string", "app_name", "传统食品"
+        }
+    }
+
+    //所有渠道公用的属性
+    productFlavors.all { flavor ->
+        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+    //指定数据库相关的文件的生成位置
+    greendao {
+        targetGenDir 'src/main/java'
+    }
+
+    sourceSets {
+        main {
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize '4g'
+        preDexLibraries = false
+    }
+
+    //指定数据库相关的文件的生成位置
+    greendao {
+        targetGenDir 'src/main/java'
+    }
+
+}
+
+dependencies {
+    //    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':SweetAlertLibrary')
+    //动态权限申请库--还需要引入rxjava
+    compile files('libs/AMap_Location_V3.4.1_20170629.jar')
+    //微信登录
+    //    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    compile files('libs/MobCommons-2017.0823.1556.jar')
+    compile files('libs/MobTools-2017.0823.1556.jar')
+    compile files('libs/ShareSDK-Core-3.0.2.jar')
+    compile files('libs/ShareSDK-QQ-3.0.2.jar')
+    compile files('libs/ShareSDK-QZone-3.0.2.jar')
+    compile files('libs/ShareSDK-SinaWeibo-3.0.2.jar')
+    compile files('libs/ShareSDK-TencentWeibo-3.0.2.jar')
+    compile files('libs/ShareSDK-Wechat-3.0.2.jar')
+    compile files('libs/ShareSDK-Wechat-Core-3.0.2.jar')
+    compile files('libs/ShareSDK-Wechat-Favorite-3.0.2.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-3.0.2.jar')
+    compile project(':IMKit')
+    compile files('libs/alipaySdk-20170922.jar')
+    //    compile files('libs/zxing.jar')
+    compile files('libs/libammsdk.jar')
+    // add library
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:support-vector-drawable:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.jakewharton:butterknife:7.0.0'
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    compile 'com.github.florent37:picassopalette:2.0.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.blankj:utilcode:1.7.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+    compile 'io.reactivex:rxjava:1.0.14'
+    compile 'io.reactivex:rxandroid:1.0.1'
+    compile 'com.google.dagger:dagger:2.4'
+    compile 'org.glassfish:javax.annotation:10.0-b28'
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.7.0@aar'
+    compile 'com.contrarywind:Android-PickerView:3.2.6'
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'org.greenrobot:greendao:3.2.2'
+    testCompile 'junit:junit:4.12'
+    apt 'com.google.dagger:dagger-compiler:2.4'
+    compile project(':RQcode')
+    compile files('libs/pinyin4android1.0.jar')
+    compile files('libs/pinyin4j-2.5.0.jar')
+    //多选相册
+    compile 'com.yanzhenjie:album:1.0.0'
+    compile files('libs/AMap_Channel_Location_V1.4.0_20160708.jar')
+    compile files('libs/MiPush_SDK_Client_3_2_2.jar')
+    compile(name: 'HMS-SDK-2.4.0.300', ext: 'aar')
+    compile project(':CallKit')
+//    compile files('libs/360update-7.0.3.jar')
+    compile files('libs/umeng-analytics-7.4.0.jar')
+    compile files('libs/umeng-common-1.4.0.jar')
+    compile project(':PushSDK')
+    compile "com.squareup.okhttp3:logging-interceptor:3.7.0"
+}
+repositories { flatDir { dirs 'aars' } }

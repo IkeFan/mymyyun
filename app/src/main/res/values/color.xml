@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#5AB941</color>
+    <color name="colorPrimaryDark">#50be33</color>
+    <color name="colorAccent">#3d3d3d</color>
+    <color name="devider">#bcbcbc</color>
+    <color name="bg_color">#f4f4f4</color>
+    <color name="stroke_color">#d6d6d6</color>
+    <color name="white">#fff</color>
+    <color name="textColorSecondary">#454545</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="normal_text_color">#504f4f</color>
+    <color name="hint_text_color">#949494</color>
+    <color name="orange_text_color">#ff8d3c</color>
+    <color name="popup_bg">#3a000000</color>
+    <color name="red">#d40519</color>
+    <color name="time_limit_bg">#faa5ad</color>
+    <color name="time_bt_bg">#fb5767</color>
+    <color name="time_bt_bg2">#faa5ad</color>
+</resources>

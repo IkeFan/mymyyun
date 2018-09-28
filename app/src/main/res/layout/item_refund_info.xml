@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/stroke_black_bg"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/camea"/>
+
+    <ImageView
+        android:id="@+id/icon"
+        android:transitionName="prePhoto"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/popup_bg"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="#fff"/>
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/delete"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/m0906_09"/>
+</RelativeLayout>

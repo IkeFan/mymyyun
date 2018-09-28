@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+                                              android:id="@+id/refresh_view"
+              android:layout_height="match_parent">
+<LinearLayout
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/toolbar_normal"/>
+
+    <com.mmy.maimaiyun.customview.LoadingSmartLayout
+        android:id="@+id/loading_smart_layout"
+        android:layout_marginTop="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/select_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="全选"/>
+
+        <LinearLayout
+            android:id="@+id/total_money_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/total_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="合计:￥0"
+                android:textColor="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/freight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="不包含运费"
+                android:textColor="@color/devider"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:text="结算"
+            android:textColor="#fff"/>
+    </LinearLayout>
+
+    <View
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+</LinearLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

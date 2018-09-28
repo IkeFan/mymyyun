@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mmy.maimaiyun.model.main.ui.activity.OverseasShoppingActivity">
+    <!--toolbar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="8dp"
+            android:src="@mipmap/icon_jiantou"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_bg_search"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/m0906_04"/>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/bg_color"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="搜索"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/tag1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#fff">
+
+            <com.mmy.maimaiyun.customview.InnerViewPager
+                android:id="@+id/banners"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:id="@+id/points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tag1"
+            android:background="#fff"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:text="XXXXX 店铺"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="125dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_def"/>
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="#fff"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabSelectedTextColor="@color/colorPrimary"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <View
+        android:background="@color/devider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/clazz"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分类"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/msg"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/bg_color"/>
+
+        <LinearLayout
+            android:id="@+id/customer_service"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/msg"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="客服"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

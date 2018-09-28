@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context=".DDCardActivity">
+
+    <include layout="@layout/toolbar_normal"/>
+
+    <LinearLayout
+        style="@style/Padding_10_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1.5dp"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="剩余张数"/>
+
+        <TextView
+            android:id="@+id/car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0张"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/Padding_10_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1.5dp"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="使用过期时间"/>
+
+        <TextView
+            android:id="@+id/time_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""/>
+    </LinearLayout>
+</LinearLayout>

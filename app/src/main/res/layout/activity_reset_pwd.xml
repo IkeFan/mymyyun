@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_color"
+              android:orientation="vertical">
+
+    <include layout="@layout/toolbar_normal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_full_width_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="12dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="12dp">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/login_05"/>
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00ffffff"
+            android:hint="手机号"
+            android:inputType="number"
+            android:text=""
+            android:textColorHint="@color/colorPrimary"/>
+
+        <ImageView
+            android:id="@+id/username_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/login_08"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_full_width_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="12dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="12dp">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/login_04"/>
+
+        <EditText
+            android:id="@+id/pwd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00ffffff"
+            android:hint="原密码"
+            android:inputType="textPassword"
+            android:text=""
+            android:textColorHint="@color/colorPrimary"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/login_08"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_full_width_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="12dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="12dp">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/login_04"/>
+
+        <EditText
+            android:id="@+id/new_pwd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00ffffff"
+            android:hint="新密码"
+            android:inputType="textPassword"
+            android:text=""
+            android:textColorHint="@color/colorPrimary"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/login_08"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_full_width_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="12dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="12dp">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/login_04"/>
+
+        <EditText
+            android:id="@+id/new_pwd2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00ffffff"
+            android:hint="再次输入新密码"
+            android:inputType="textPassword"
+            android:text=""
+            android:textColorHint="@color/colorPrimary"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/login_08"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_full_width_login_bg"
+        android:text="确  认"
+        android:textColor="#fff"
+        android:textSize="18sp"/>
+
+</LinearLayout>

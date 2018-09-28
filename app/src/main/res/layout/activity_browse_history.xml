@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mmy.maimaiyun.model.personal.ui.activity.BrowseHistoryActivity">
+
+    <include layout="@layout/toolbar_normal"/>
+
+    <com.mmy.maimaiyun.customview.LoadingSmartLayout
+        android:id="@+id/loading_smart_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_weight="1"/>
+
+    <RelativeLayout
+        android:id="@+id/delete_container"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/delete"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="删除"
+            android:textColor="#fff"/>
+    </RelativeLayout>
+</LinearLayout>

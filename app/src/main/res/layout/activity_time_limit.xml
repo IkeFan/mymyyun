@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/time_limit_bg"
+    android:orientation="vertical"
+    tools:context="com.mmy.maimaiyun.model.main.ui.activity.TimeLimitActivity">
+
+    <include layout="@layout/toolbar_normal"/>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        app:tabIndicatorColor="@color/red"
+        app:tabIndicatorHeight="2dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/bg_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/hint_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="抢购中先下单先得哦"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/hint_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始时间: 00:00:00"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/refresh_view"
+    android:layout_height="match_parent"
+    tools:context=".model.main.ui.activity.SpecialOfferActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_normal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分类"/>
+
+            <View
+                android:layout_margin="10dp"
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="@color/devider"/>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:tabIndicatorColor="@color/colorPrimary"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/colorPrimary"/>
+        </LinearLayout>
+
+        <com.mmy.maimaiyun.customview.LoadingSmartLayout
+            android:id="@+id/loading_smart_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"/>
+    </LinearLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

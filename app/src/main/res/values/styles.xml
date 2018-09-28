@@ -1,0 +1,78 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/textColorSecondary</item>
+        <item name="android:textColorHint">@color/devider</item>
+        <item name="android:windowAnimationStyle">@style/MyWindowAnimTheme</item>
+        <!--<item name="android:textColorSecondary">#333333</item>-->
+    </style>
+
+    <style name="MyWindowAnimTheme">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_right_in</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_right_out</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+    </style>
+
+    <!--去除toolbar两侧空白-->
+    <style name="toolbar_not_space">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="contentInsetStart">0dp</item><!-- 设置该属性解决空白部分-->
+    </style>
+
+    <style name="loading_smart_Progress_circle">
+        <item name="android:indeterminateDrawable">@drawable/loading_bg</item>
+        <item name="android:minWidth">25dp</item>
+        <item name="android:minHeight">25dp</item>
+        <item name="android:maxWidth">60dp</item>
+        <item name="android:maxHeight">60dp</item>
+    </style>
+
+
+    <style name="myTransparent" parent="AppTheme">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+
+    <style name="submitBt">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:background">@drawable/bt_select_blue</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Padding_10_15">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+    </style>
+
+    <style name="Padding_5_10">
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <!--<style name="comment_star" parent="Base.Widget.AppCompat.RatingBar">-->
+    <!--<item name="progressDrawable">@drawable/star_bg</item>-->
+    <!--<item name="android:maxHeight">25dp</item>-->
+    <!--<item name="android:minHeight">25dp</item>-->
+    <!--</style>-->
+</resources>

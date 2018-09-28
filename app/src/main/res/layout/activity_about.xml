@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:orientation="vertical"
+    android:background="@color/bg_color"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:gravity="center_horizontal"
+    tools:context=".model.personal.ui.activity.AboutActivity">
+
+    <include layout="@layout/toolbar_normal"/>
+
+    <ImageView
+        android:src="@mipmap/ic_launcher_trad_food"
+        android:layout_marginTop="20dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:lineSpacingExtra="4dp"
+        android:text="        深圳掌上中国传统食品有限公司成立于2014年，公司专注于中国传统食品的挖掘和中国传统文化的传承，将中国传统食品和中国传统文化相结合，以互联网为媒介，形成最具特色与韵味的中国传统食品文化电商平台。"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="4dp"
+        android:text="        我们不仅注重舌尖的体验，更注重美食的安全质量，确保将安全美味的地方特色食品传播至千家万户，带领地方特色食品走向世界，同时也为中国传统文化传承寻找接班人。"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:lineSpacingExtra="5dp"
+        android:textColor="@color/hint_text_color"
+        android:text="©2014 深圳市掌上传统食品科技有限公司\n版权所有 粤ICP备15089479号"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

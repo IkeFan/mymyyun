@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/refresh_view"
+    android:layout_height="match_parent"
+
+    tools:context=".model.personal.ui.activity.AddressManagerActivity">
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/bg_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/toolbar_normal"/>
+
+
+    <com.mmy.maimaiyun.customview.LoadingSmartLayout
+        android:id="@id/loading_smart_layout"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <Button
+        android:text="添加新地址"
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:textSize="17sp"
+        android:id="@+id/add_new_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/shape_white"
+              android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/good_img"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_def"/>
+
+    <TextView
+        android:id="@+id/good_text"
+        android:padding="5dp"
+        android:maxLines="1"
+        android:text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+        android:ellipsize="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/good_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥ 188.00"
+            android:textColor="@color/colorPrimary"/>
+        <TextView
+            android:id="@+id/price2"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥ 188.00"
+            android:background="@drawable/shape_center_devide_gray"
+            android:textColor="@color/hint_text_color"/>
+        <!--<ImageView-->
+            <!--android:id="@+id/add_shop_car"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@mipmap/shopping"/>-->
+    </LinearLayout>
+</LinearLayout>

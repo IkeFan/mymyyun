@@ -1,0 +1,95 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context="com.mmy.maimaiyun.model.main.ui.fragment.HomeFragment">
+    <!--toolbar-->
+    <LinearLayout
+        android:id="@+id/title_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:id="@+id/city_search"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:src="@mipmap/head_02"/>
+
+            <TextView
+                android:id="@+id/city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="深圳"
+                android:textColor="#fff"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_black"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/m0906_04"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请输入商品/供应商"
+                android:textColor="@color/hint_text_color"/>
+        </LinearLayout>
+
+        <com.mmy.maimaiyun.customview.MessageHintView
+            android:id="@+id/msg_hint"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            app:text_size_sp="15"
+            app:type="pint">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/head_05"/>
+        </com.mmy.maimaiyun.customview.MessageHintView>
+    </LinearLayout>
+
+   <android.support.v4.widget.SwipeRefreshLayout
+       android:id="@+id/refresh"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <android.support.v7.widget.RecyclerView
+           android:id="@+id/list"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="20dp"
+           android:paddingLeft="3dp"
+           android:paddingRight="3dp"/>
+   </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>
+

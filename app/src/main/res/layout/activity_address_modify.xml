@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context=".model.personal.ui.activity.AddressModifyActivity">
+
+    <include layout="@layout/toolbar_normal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="收货人"/>
+
+        <EditText
+            android:background="#fff"
+            android:hint="请输入.."
+            android:textSize="15sp"
+            android:id="@+id/receipt_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="联系电话"/>
+
+        <EditText
+            android:background="#fff"
+            android:hint="请输入.."
+            android:textSize="15sp"
+            android:id="@+id/phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="所在地区"/>
+
+        <TextView
+            android:id="@+id/city_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="8dp"
+            android:drawableRight="@mipmap/back"
+            android:gravity="right"
+            android:text="XXX XXX XXX"
+            android:textColor="@color/hint_text_color"/>
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="2dp"-->
+        <!--android:background="#fff"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:padding="10dp">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="80dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="街道"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/street"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:drawablePadding="8dp"-->
+            <!--android:drawableRight="@mipmap/back"-->
+            <!--android:gravity="right"-->
+            <!--android:text="XXXXX"-->
+            <!--android:textColor="@color/hint_text_color"/>-->
+    <!--</LinearLayout>-->
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="2dp"
+        android:background="#fff"
+        android:gravity="top"
+        android:padding="10dp"
+        android:text=""/>
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#fff"
+        android:text="删除地址"
+        android:textColor="@color/colorPrimary"/>
+</LinearLayout>

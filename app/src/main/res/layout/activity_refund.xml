@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context=".model.personal.ui.activity.RefundActivity">
+
+    <include layout="@layout/toolbar_normal"/>
+
+  <include layout="@layout/item_order_good"/>
+
+    <RelativeLayout
+        android:id="@+id/return_good"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#fff"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tag1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="仅退款"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tag1"
+            android:layout_marginTop="3dp"
+            android:text="为收到货，或买家协商同意前提下"
+            android:textColor="@color/hint_text_color"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/office_jiantou"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/return_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="#fff"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tag2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退货退款"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tag2"
+            android:layout_marginTop="3dp"
+            android:text="已收到货，需要退换已收到的货物"
+            android:textColor="@color/hint_text_color"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/office_jiantou"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/exchange_good"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="#fff"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tag3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="换货"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tag3"
+            android:layout_marginTop="3dp"
+            android:text="商品存在质量问题，联系卖家协商换货"
+            android:textColor="@color/hint_text_color"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/office_jiantou"/>
+    </RelativeLayout>
+</LinearLayout>
